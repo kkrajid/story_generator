@@ -50,29 +50,31 @@ A FastAPI-based web service that creates characters and generates personalized s
 
 4. **Set up environment variables**
    
-   Create a `.env` file in the project root:
+   Create a `.env` file in the project root with your Supabase credentials:
    ```env
-   # Supabase Configuration
-   SUPABASE_URL=your_project_url
-   SUPABASE_KEY=your_project_api_key
-   SUPABASE_DB_PASSWORD=your_database_password
+   # Supabase Database Configuration
+   DB_USER=postgres
+   DB_PASS=your_database_password
+   DB_HOST=db.your-project-ref.supabase.co
+   DB_NAME=postgres
    
    # Google Gemini AI
    GEMINI_API_KEY=your_gemini_api_key
    ```
 
-5. **Set up Supabase**
+5. **Set up Supabase Database**
    
-   a. Create a Supabase account at [https://supabase.com](https://supabase.com)
-   
-   b. Create a new project in Supabase
-   
-   c. Get your Supabase credentials from the project settings:
-      - Project URL
-      - Project API Key (anon/public)
-      - Database Password
-   
-   d. The database will be automatically created and configured in Supabase. No manual database creation is needed.
+   The project uses Supabase as the database provider. Follow these steps to set up your database:
+
+   1. Create a Supabase account at https://supabase.com
+   2. Create a new project
+   3. Get your database credentials from the project settings:
+      - Go to Project Settings > Database
+      - Find your connection string or individual credentials
+   4. Update the `.env` file with your Supabase credentials
+   5. The database is automatically created in Supabase, so you don't need to run any CREATE DATABASE commands
+
+   Note: The default database name in Supabase is `postgres`. Make sure to use the correct host URL from your Supabase project settings.
 
 ## 🚀 Running the Application
 
@@ -213,9 +215,10 @@ Logs are written to both console and `app.log` file.
 
 | Variable | Description | Required | Default |
 |----------|-------------|----------|---------|
-| `SUPABASE_URL` | Supabase project URL | Yes | - |
-| `SUPABASE_KEY` | Supabase project API key | Yes | - |
-| `SUPABASE_DB_PASSWORD` | Supabase database password | Yes | - |
+| `DB_USER` | PostgreSQL username | No | `postgres` |
+| `DB_PASS` | PostgreSQL password | Yes | - |
+| `DB_HOST` | PostgreSQL host | Yes | - |
+| `DB_NAME` | PostgreSQL database name | No | `postgres` |
 | `GEMINI_API_KEY` | Google Gemini API key | Yes | - |
 
 ## 🧪 Testing
@@ -242,10 +245,9 @@ Expected response:
 ### Common Issues
 
 1. **Database Connection Error**
-   - Verify Supabase project is active
-   - Check Supabase credentials in `.env`
-   - Ensure database tables are properly created
-   - Check if IP address is allowed in Supabase dashboard
+   - Verify PostgreSQL is running
+   - Check database credentials in `.env`
+   - Ensure database exists
 
 2. **Gemini AI Configuration Error**
    - Verify `GEMINI_API_KEY` is set correctly
