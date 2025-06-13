@@ -18,7 +18,7 @@ A FastAPI-based web service that creates characters and generates personalized s
 
 - **Framework**: FastAPI
 - **AI Service**: Google Gemini AI (gemini-1.5-flash)
-- **Database**: PostgreSQL with asyncpg
+- **Database**: Supabase (PostgreSQL)
 - **ORM**: SQLAlchemy (async)
 - **Validation**: Pydantic
 - **Environment**: Python 3.8+
@@ -26,7 +26,7 @@ A FastAPI-based web service that creates characters and generates personalized s
 ## 📋 Prerequisites
 
 - Python 3.8 or higher
-- PostgreSQL database
+- Supabase account and project
 - Google Gemini API key
 
 ## 🔧 Installation
