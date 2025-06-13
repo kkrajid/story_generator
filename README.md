@@ -33,8 +33,8 @@ A FastAPI-based web service that creates characters and generates personalized s
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
-   cd character-story-generator
+   git clone https://github.com/kkrajid/story_generator.git
+   cd story_generator
    ```
 
 2. **Create virtual environment**
