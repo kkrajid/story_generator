@@ -1,0 +1,69 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+.env/
+env.bak/
+venv.bak/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# VSCode, PyCharm & IDE files
+.vscode/
+.idea/
+
+# Pytest
+.cache/
+.pytest_cache/
+
+# MyPy & Pylint
+.mypy_cache/
+.dmypy.json
+.pyre/
+*.cover
+
+# Environments variables
+.env
+.env.*
+
+# SQLite or other local DBs
+*.sqlite3
+*.db
+
+# Logs
+*.log
+
+# Gunicorn PID and log
+gunicorn.pid
+gunicorn.log
+
+# Coverage reports
+htmlcov/
+coverage.xml
+*.cover
+*.py,cover
+
+# dist and build folders
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Docker
+docker-compose.override.yml
+Dockerfile*
+.dockerignore
+
+# OS-specific
+.DS_Store
+Thumbs.db
