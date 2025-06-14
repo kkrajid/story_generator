@@ -2,6 +2,10 @@
 
 A FastAPI-based web service that creates characters and generates personalized stories about them using Google's Gemini AI.
 
+## 🌐 Live Demo
+
+Check out the live application at [https://quirktale.xyz/](https://quirktale.xyz/)
+
 ## 🚀 Features
 
 - **Character Management**: Create and store character profiles with detailed descriptions
